@@ -4,11 +4,11 @@ import { withRouter } from 'react-router-dom';
 
 // Components
 import Routes from './config/routes';
-// import MainNav from './components/MainNav/MainNav';
-// import Footer from './components/Footer/Footer'
+import MainNav from './components/MainNav/MainNav';
+import Footer from './components/Footer/Footer'
 
-import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css';
 
 class App extends React.Component {
   state = {
@@ -34,11 +34,11 @@ class App extends React.Component {
   render(){
     return (
       <div className="App">
-        {/* <MainNav currentUser={this.state.currentUser} setCurrentUser={this.setCurrentUser} logout={this.logout} /> */}
+        <MainNav currentUser={this.state.currentUser} setCurrentUser={this.setCurrentUser} logout={this.logout} />
         <div id="mainContent">
           <Routes logout={this.logout} />
         </div>
-        {/* <Footer /> */}
+        <Footer />
       </div>
     );
   }
