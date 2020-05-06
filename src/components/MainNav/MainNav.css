@@ -1,12 +1,16 @@
 .navbar-brand {
-  font-size: 5em;
+  font-size: 4em;
 }
 
 .nav-link:hover {
   cursor: pointer;
 }
 
-.nav-logo {
+.bordered {
+  border-right: 1px solid black;
+}
+
+.navbar-light .nav-logo {
   color: #c2c2c2;
 }
 

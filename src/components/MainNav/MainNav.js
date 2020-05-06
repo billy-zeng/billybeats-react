@@ -4,8 +4,8 @@ import Nav from 'react-bootstrap/Nav';
 import NavItem from 'react-bootstrap/NavItem';
 import Navbar from 'react-bootstrap/Navbar';
 import Modal from 'react-bootstrap/Modal';
-// import Signup from '../Auth/Signup';
-// import Login from '../Auth/Login';
+import Signup from '../Auth/Signup';
+import Login from '../Auth/Login';
 
 // Styles
 import './MainNav.css';
@@ -42,15 +42,19 @@ class MainNav extends React.Component {
       <Navbar className="navbar-expand-lg">
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Brand href="/"><i className="fab fa-soundcloud nav-icon"></i></Navbar.Brand>
-          <Navbar.Brand href="/"><h4 id="page-title" className="nav-logo">BillyBeats</h4></Navbar.Brand>
+          <Navbar.Brand href="/"><span id="page-title" className="nav-logo">BillyBeats</span></Navbar.Brand>
           <Navbar.Collapse id="basic-navbar-nav">
           <Nav className ="mr-auto mt-2 mt-lg-0">
             <NavItem>
               <Link className="nav-link">Stream</Link>
             </NavItem>
-            <NavItem>
-              <Link className="nav-link">Library</Link>
-            </NavItem>
+            {
+              !this.props.currentUser ? 
+              "" : 
+              <NavItem>
+                <Link className="nav-link">Library</Link>
+              </NavItem>
+            }
           </Nav>
           <Nav className="ml-auto mt-2 mt-lg-0">
             {!this.props.currentUser ? (
@@ -61,14 +65,14 @@ class MainNav extends React.Component {
                 <NavItem>
                   <Link className="nav-link" onClick={this.handleOpenLogin}>Log In</Link>
                 </NavItem>
-                {/* <Modal show={this.state.show} onHide={this.handleClose}>
+                <Modal show={this.state.show} onHide={this.handleClose}>
                   <Modal.Body>
                     {this.state.showSignup
                       ? <Signup handleOpenLogin={this.handleOpenLogin} />
                       : <Login handleOpenSignup={this.handleOpenSignup} setCurrentUser={this.props.setCurrentUser} handleClose={this.handleClose} />
                     }
                   </Modal.Body>
-                </Modal> */}
+                </Modal>
               </>
               ) : (
               <>

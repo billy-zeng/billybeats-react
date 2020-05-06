@@ -4,6 +4,14 @@ footer {
   padding-top: 0.2em;
 }
 
+footer i {
+  color: #c2c2c2;
+}
+
+footer p {
+  color: #c2c2c2;
+}
+
 .fab {
   font-size: 2em;
 }
