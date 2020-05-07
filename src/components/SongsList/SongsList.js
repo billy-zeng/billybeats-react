@@ -14,7 +14,7 @@ class SongsList extends React.Component {
 
   render(){
     return(
-      <div className="col">
+      <div className="col mt-4">
         {this.displaySongs(this.props.songs)}
       </div>
     )
