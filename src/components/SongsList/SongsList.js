@@ -1,14 +1,16 @@
 import React from 'react';
-// import SongCard from './SongCard/SongCard.js';
+import SongCard from './SongCard/SongCard.js';
 
 class SongsList extends React.Component {
 
   displaySongs = songs => {    
     return songs.map((song, i) => {
-      // return <SongCard key={song._id} songData={song} />
       return (
-        <li key={i}>{song.title}</li>
+        <SongCard key={i} song={song} artistPage={this.props.artistPage} />
       )
+      // return (
+      //   <li key={i}>{song.title}</li>
+      // )
     });
   };
 

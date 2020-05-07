@@ -27,7 +27,7 @@ class Artist extends React.Component {
     return(
       <div className="d-flex flex-column align-items-center justify-content-center">
         {this.state.artistData && <ArtistHeader artistData={this.state.artistData} />}
-        {this.state.artistData && <SongsList songs={this.state.artistData.songs} />}
+        {this.state.artistData && <SongsList songs={this.state.artistData.songs} artistPage={true} />}
       </div>
     )
   }

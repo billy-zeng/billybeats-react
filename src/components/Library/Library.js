@@ -31,7 +31,7 @@ class Library extends React.Component {
     return (
       <>
         <h4 className="library-header">Songs that you've liked</h4>
-        <SongsList songs={this.state.songs} />
+        <SongsList songs={this.state.songs} artistPage={true} />
       </>
     )
   }
