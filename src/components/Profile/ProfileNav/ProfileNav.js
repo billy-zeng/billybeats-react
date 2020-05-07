@@ -44,9 +44,6 @@ class ProfileNav extends React.Component {
         <Link to='/profile' className="profile-nav-btn btn btn-dark text-light d-flex flex-row justify-content-start align-items-center">
           <i className="fas fa-user"></i>Overview
         </Link>
-        <Link to="/userfeed" className="profile-nav-btn btn btn-dark text-light d-flex flex-row justify-content-start align-items-center">
-          <i className="fas fa-comment-alt"></i>My Feed
-        </Link>
         <Link to='/profile/edit' className="profile-nav-btn btn btn-dark text-light d-flex flex-row justify-content-start align-items-center">  
           <i className="far fa-edit"></i>Update Info
         </Link>

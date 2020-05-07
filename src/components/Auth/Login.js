@@ -32,7 +32,7 @@ class Login extends React.Component {
       <div className='container mt-4'>
         <div className='row'>
           <div className='col-md-8 offset-md-2'>
-            <h4 className='mb-3'>Login</h4>
+            <h4 className='mb-3 auth-title'>Login</h4>
             <form onSubmit={this.handleSubmit}>
               <div className='form-group'>
                 <label htmlFor='name'>Username</label>

@@ -1,11 +1,13 @@
 import React from 'react';
+import SongsContainer from '../../containers/SongsContainer/SongsContainer';
 import './Home.css';
 
 const Home = props => {
   return (
-    <div className="landing text-light pt-5">
-      <h1>Welcome to BillyBeats</h1>
-    </div>
+    <>
+      <h4 className="home-header">Welcome to BillyBeats</h4>
+      <SongsContainer />
+    </>
   );
 }
 

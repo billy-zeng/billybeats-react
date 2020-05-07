@@ -2,7 +2,7 @@
   text-align: center;
 }
 
-div > h4 {
+div > h4.auth-title {
   text-align: center;
   color: #7c7d80;
 }

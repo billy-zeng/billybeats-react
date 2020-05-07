@@ -2,7 +2,7 @@ import React from 'react';
 import SongsList from '../../components/SongsList/SongsList'
 import axios from 'axios';
 
-class TeamsContainer extends React.Component {
+class SongsContainer extends React.Component {
   state = {
     songs: []
   };

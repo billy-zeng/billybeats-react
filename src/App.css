@@ -1,5 +1,6 @@
 #mainContent {
   min-height: 80vh;
+  background-color: whitesmoke;
 }
 
 #mainContent .row {
@@ -19,6 +20,12 @@ li {
 }
 
 body {
-  background-color:#f8f9fa;
   font-family: 'Open Sans', sans-serif;
+}
+
+.landing {
+  background-color: white;
+  min-height: 80vh;
+  margin-right: 6.5em;
+  margin-left: 6.5em;
 }
