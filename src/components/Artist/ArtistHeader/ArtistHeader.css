@@ -10,3 +10,8 @@
   width: 12em;
   border-radius: 50%;
 }
+
+button.follow-btn {
+  background-color: #ff6e00;
+  color: white;
+}
