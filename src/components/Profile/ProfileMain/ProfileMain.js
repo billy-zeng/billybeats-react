@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 class ProfileMain extends React.Component {
-  
+   
   displayFollowing = followedArtists => {
     console.log(followedArtists)
     return followedArtists.map((followedArtist, i) => {
@@ -22,20 +22,18 @@ class ProfileMain extends React.Component {
   }
 
   render(){
-    // console.log(this.state.profile.following)
-    // console.log(this.state.profile.likes)
     return (
-      <div className="col-sm-9 d-flex flex-column align-items-center justify-content-start mt-5">
-        <div className="container d-flex flex-row align-items-center justify-content-center">
-          <div className="container d-flex flex-row align-items-center justify-content-center">
+      <div className="col-sm-9 d-flex flex-column align-items-start justify-content-start mt-3">
+        <div className="container d-flex flex-column align-items-start justify-content-start">
+          <div className="container d-flex flex-row align-items-start justify-content-start">
             <ul>
-              <h3>Artists you are following</h3>  
+              <h4>Artists you are following</h4>  
               {this.props.profile && this.displayFollowing(this.props.following)}   
             </ul>
           </div>
-          <div className="container d-flex flex-row align-items-center justify-content-center">
+          <div className="container d-flex flex-row align-items-start justify-content-start">
             <ul>
-              <h3>Songs you've liked</h3>
+              <h4>Songs you've liked</h4>
               {this.props.profile && this.displayLikes(this.props.likes)}  
             </ul>
           </div>
