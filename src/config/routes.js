@@ -4,6 +4,7 @@ import Home from '../components/Home/Home';
 import ProfileContainer from '../containers/ProfileContainer/ProfileContainer';
 import Artist from '../components/Artist/Artist';
 import Stream from '../components/Stream/Stream';
+import Library from '../components/Library/Library';
 
 const Routes = props => {
   return (
@@ -17,6 +18,7 @@ const Routes = props => {
       />
       <Route path='/artists/:artistId' component={Artist} />
       <Route path='/stream' component={Stream} />
+      <Route path='/library' component={Library} />
     </Switch>
   )
 }
