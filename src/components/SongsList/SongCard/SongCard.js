@@ -57,7 +57,7 @@ class SongCard extends React.Component {
 
   render(){
     return (
-      <div className="ml-4 mb-3">
+      <div className="ml-4 pb-4">
         <ReactPlayer
           url={this.props.song.url}
           height='80%'
