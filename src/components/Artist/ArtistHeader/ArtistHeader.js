@@ -44,7 +44,7 @@ class ArtistHeader extends React.Component {
         res.data.following.forEach(artist => {
           if(artist._id === this.props.artistData._id) {
             this.setState({
-              liked: true
+              following: true
             });
           }
         });
@@ -65,7 +65,7 @@ class ArtistHeader extends React.Component {
         <div id="artist-overview" className="col-sm-9 d-flex flex-column align-items-start justify-content-center text-light bg-dark pl-5">
           <h1>{this.props.artistData.name}</h1>
           {
-            this.state.liked
+            this.state.following
               ? <button onClick={this.unfollowArtist} type="button" className="btn follow-btn justify-self-center mt-2">Unfollow</button>
               : <button onClick={this.followArtist} type="button" className="btn follow-btn justify-self-center mt-2">+ Follow</button>
           }
