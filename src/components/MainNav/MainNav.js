@@ -44,18 +44,18 @@ class MainNav extends React.Component {
           <Navbar.Brand href="/"><i className="fab fa-soundcloud nav-icon"></i></Navbar.Brand>
           <Navbar.Brand href="/"><span id="page-title" className="nav-logo">BillyBeats</span></Navbar.Brand>
           <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className ="mr-auto mt-2 mt-lg-0">
-            <NavItem>
-              <Link className="nav-link">Stream</Link>
-            </NavItem>
-            {
-              !this.props.currentUser ? 
-              "" : 
+          {
+            !this.props.currentUser ? 
+            "" : 
+            <Nav className ="mr-auto mt-2 mt-lg-0">
+              <NavItem>
+                <Link className="nav-link">Stream</Link>
+              </NavItem>
               <NavItem>
                 <Link className="nav-link">Library</Link>
               </NavItem>
-            }
-          </Nav>
+            </Nav>
+          }
           <Nav className="ml-auto mt-2 mt-lg-0">
             {!this.props.currentUser ? (
               <>
