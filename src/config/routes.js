@@ -3,6 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 import Home from '../components/Home/Home';
 import ProfileContainer from '../containers/ProfileContainer/ProfileContainer';
 import Artist from '../components/Artist/Artist';
+import Stream from '../components/Stream/Stream';
 
 const Routes = props => {
   return (
@@ -15,6 +16,7 @@ const Routes = props => {
         )}
       />
       <Route path='/artists/:artistId' component={Artist} />
+      <Route path='/stream' component={Stream} />
     </Switch>
   )
 }

@@ -49,10 +49,10 @@ class MainNav extends React.Component {
             "" : 
             <Nav className ="mr-auto mt-2 mt-lg-0">
               <NavItem>
-                <Link className="nav-link">Stream</Link>
+                <Link className="nav-link" to="/stream">Stream</Link>
               </NavItem>
               <NavItem>
-                <Link className="nav-link">Library</Link>
+                <Link className="nav-link" to="/library">Library</Link>
               </NavItem>
             </Nav>
           }
@@ -76,9 +76,6 @@ class MainNav extends React.Component {
               </>
               ) : (
               <>
-                <NavItem>
-                  <Link className="nav-link" to="/userfeed">My Feed</Link>
-                </NavItem>
                 <NavItem>
                   <Link className="nav-link" to="/profile">Profile</Link>
                 </NavItem>
