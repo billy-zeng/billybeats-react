@@ -1,15 +1,13 @@
 import React from "react";
 import axios from 'axios';
-import ReactPlayer from "react-player";
 import { Link } from 'react-router-dom';
 
-import './SongCard.css'
+import './SongInteraction.css'
  
-class SongCard extends React.Component {
+class SongInteraction extends React.Component {
   state = {
     userId: localStorage.getItem('uId'),
     liked: false,
-    artistPage: this.props.artistPage
   }
 
   likeSong = () =>{
@@ -57,26 +55,16 @@ class SongCard extends React.Component {
 
   render(){
     return (
-      <div className="ml-4 mb-3">
-        <ReactPlayer
-          url={this.props.song.url}
-          height='80%'
-          width='75%'
-        />
+      <>
         {
           !this.state.liked
             ? <button onClick={this.likeSong} type="button" className="btn btn-sm like-btn notliked justify-self-center mt-2"><i className="fas fa-heart"></i></button>
             : <button onClick={this.unlikeSong} type="button" className="btn btn-sm like-btn liked justify-self-center mt-2"><i className="fas fa-heart"></i></button>
         }
-        {
-          !this.state.artistPage
-            ? <Link to={`/artists/${this.props.song.artist._id}`} className="ml-4">Go to {this.props.song.artist.name}</Link>
-            : ""
-        }
-        <Link to={`/songs/${this.props.song._id}`} className="ml-4">Go to {this.props.song.title}</Link>
-      </div>
+        <Link to={`/artists/${this.props.song.artist._id}`} className="ml-4">Go to {this.props.song.artist.name}</Link>
+      </>
     )
   }
 }
  
-export default SongCard;
+export default SongInteraction;

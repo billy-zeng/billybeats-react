@@ -16,7 +16,7 @@ class ProfileMain extends React.Component {
     console.log(likedSongs)
     return likedSongs.map((likedSong, i) => {
       return (
-        <li key={i}><Link to={`/players/${likedSong._id}`}>{likedSong.title}</Link></li>
+        <li key={i}><Link to={`/songs/${likedSong._id}`}>{likedSong.title}</Link></li>
       )
     })
   }

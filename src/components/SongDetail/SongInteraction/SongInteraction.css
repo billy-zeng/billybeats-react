@@ -1,0 +1,13 @@
+button.like-btn {
+  background-color: white;
+  width: 2%;
+  border: solid 1px #c2c2c2;
+}
+
+button.liked {
+  color: #ff6e00;
+}
+
+button.not-liked {
+  color: #c2c2c2;
+}
